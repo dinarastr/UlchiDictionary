@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.RussianFragment">
+
+
+    <TextView
+        android:id="@+id/from"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/arrow"
+        app:layout_constraintTop_toTopOf="@+id/arrow"
+        app:layout_constraintBottom_toBottomOf="@id/arrow"
+        android:layout_width="wrap_content"
+        android:text="русский"
+        android:textSize="20sp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textStyle="bold"
+        android:background="@drawable/row_bg"
+        android:textColor="@color/darkTeal"
+        android:layout_height="50dp"/>
+    <ImageView
+        android:id="@+id/arrow"
+        android:background="@drawable/row_bg"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_baseline_compare_arrows_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="80dp"
+        android:layout_height="50dp"/>
+    <TextView
+        android:id="@+id/to"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textStyle="bold"
+        android:background="@drawable/row_bg"
+        android:textColor="@color/darkTeal"
+        app:layout_constraintStart_toEndOf="@+id/arrow"
+        app:layout_constraintTop_toTopOf="@+id/arrow"
+        app:layout_constraintBottom_toBottomOf="@id/arrow"
+        android:layout_width="wrap_content"
+        android:text="ульчский"
+        android:layout_height="50dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/russianwords_rv"
+        android:layout_marginTop="20dp"
+        tools:listitem="@layout/text_row"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/arrow"
+        app:layout_constraintBottom_toTopOf="@id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <EditText
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:hint="Введите слово"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
