@@ -1,127 +1,585 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="4dp"
-    android:padding="8dp"
-    android:orientation="vertical"
+    android:layout_margin="8dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/russian_theme"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/russian"
             android:textAppearance="@style/RobotoMedium"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/russian"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/ulchione"
             android:textSize="16sp"
-            android:layout_marginEnd="16dp"
-            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             />
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/exampleone"
+            app:layout_constraintTop_toBottomOf="@id/ulchione"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textStyle="italic"
+            style="@style/RobotoMedium"
+            android:textColor="@color/bluish_grey"
+            android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/ab"
-            android:textAppearance="@style/RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/darkTeal"
-            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            android:id="@+id/exampleonerus"
+            style="@style/RobotoMedium"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/exampleone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/commentone"
+            android:textColor="@color/bluish_grey"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/exampleonerus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:visibility="gone"
             android:textSize="14sp"
-            />
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/ulchitwo"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commentone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/bc"
-            android:textAppearance="@style/RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/darkTeal"
-            android:layout_marginEnd="16dp"
+            android:id="@+id/commenttwo"
+            app:layout_constraintTop_toBottomOf="@id/ulchitwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
             android:textSize="14sp"
-            />
+            android:visibility="gone"
+
+            android:textColor="@color/bluish_grey"
+            android:textAppearance="@style/RobotoMedium"
+            android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/cd"
-            android:textAppearance="@style/RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/ulchithree"
+            android:textSize="16sp"
+            android:visibility="gone"
+
             android:textColor="@color/darkTeal"
-            android:layout_marginEnd="16dp"
-            android:textSize="14sp"
-            />
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commenttwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/de"
-            android:textAppearance="@style/RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/darkTeal"
-            android:layout_marginEnd="16dp"
+            android:id="@+id/commentthree"
             android:textSize="14sp"
-            />
+            android:visibility="gone"
+            android:textColor="@color/bluish_grey"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/ulchithree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/ef"
-            android:textAppearance="@style/RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/darkTeal"
-            android:layout_marginEnd="16dp"
-            android:textSize="14sp"
-            />
+            android:visibility="gone"
 
+            android:id="@+id/exampletwo"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commentthree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
         <TextView
-            android:id="@+id/fg"
-            android:textAppearance="@style/RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/darkTeal"
-            android:layout_marginEnd="16dp"
-            android:textSize="14sp"
-            />
+            android:visibility="gone"
 
+            android:id="@+id/exampletworus"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/exampletwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
         <TextView
-            android:id="@+id/gh"
-            android:textAppearance="@style/RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/darkTeal"
-            android:layout_marginEnd="16dp"
-            android:textSize="14sp"
-            />
+            android:id="@+id/examplethree"
+            android:textSize="16sp"
+            android:visibility="gone"
 
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/exampletworus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
         <TextView
-            android:id="@+id/hi"
-            android:textAppearance="@style/RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/darkTeal"
-            android:layout_marginEnd="16dp"
-            android:textSize="14sp"
-            />
+            android:id="@+id/examplethreerus"
+            android:textSize="16sp"
+            android:visibility="gone"
 
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/examplethree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
         <TextView
-            android:id="@+id/ij"
-            android:textAppearance="@style/RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/darkTeal"
-            android:layout_marginEnd="16dp"
-            android:textSize="14sp"
-            />
+            android:id="@+id/examplefour"
+            android:textSize="16sp"
+            android:visibility="gone"
 
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/examplethreerus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
         <TextView
-            android:id="@+id/jk"
-            android:textAppearance="@style/RobotoRegular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/examplefourrus"
+            android:textSize="16sp"
+            android:visibility="gone"
+
             android:textColor="@color/darkTeal"
-            android:layout_marginEnd="16dp"
-            android:textSize="14sp"
-            />
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/examplefour"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/commenttwelve"
+            android:textSize="16sp"
+            android:visibility="gone"
 
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/examplefourrus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/ulchifour"
+            android:textSize="16sp"
+            android:visibility="gone"
 
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commenttwelve"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
 
+            android:id="@+id/commentsixteen"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/ulchifour"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
 
+            android:id="@+id/examplefiverus"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commentsixteen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/commenteighteen"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:visibility="gone"
 
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/examplefiverus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/ulchifive"
+            android:textSize="16sp"
+            android:visibility="gone"
 
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commenteighteen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/commentnineteen"
+            android:textSize="16sp"
+            android:visibility="gone"
 
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/ulchifive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/ulchisix"
+            android:textSize="16sp"
+            android:visibility="gone"
 
-</LinearLayout>
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commentnineteen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:id="@+id/commenttwenty"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/ulchisix"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/ulchiseven"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commenttwenty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/commenttwentyone"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/ulchiseven"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/ulchieight"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commenttwentyone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:id="@+id/commenttwentytwo"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/ulchieight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/ulchinine"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commenttwentytwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/commenttwentythree"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/ulchinine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/ulchiten"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commenttwentythree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/commenttwentyfour"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/ulchiten"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/ulchieleven"
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commenttwentyfour"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:id="@+id/commenttwentyfive"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/ulchieleven"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:id="@+id/ulchitwelve"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/commenttwentyfive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:id="@+id/examplesix"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/ulchitwelve"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:id="@+id/examplesixrus"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/examplesix"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:id="@+id/exampleseven"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/examplesixrus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:id="@+id/examplesevenrus"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/exampleseven"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:id="@+id/commenttwentysix"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/examplesevenrus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            android:id="@+id/ulchithirteen"
+            app:layout_constraintTop_toBottomOf="@id/commenttwentysix"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            android:id="@+id/commenttwentyseven"
+            app:layout_constraintTop_toBottomOf="@id/ulchithirteen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            android:id="@+id/ulchifourteen"
+            app:layout_constraintTop_toBottomOf="@id/commenttwentyseven"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            android:id="@+id/commentthirtyfour"
+            app:layout_constraintTop_toBottomOf="@id/ulchifourteen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textSize="16sp"
+            android:visibility="gone"
+
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            android:id="@+id/ulchififteen"
+            app:layout_constraintTop_toBottomOf="@id/commentthirtyfour"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            android:id="@+id/commentthirtysix"
+            app:layout_constraintTop_toBottomOf="@id/ulchififteen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:textColor="@color/darkTeal"
+            android:textAppearance="@style/RobotoMedium"
+            android:id="@+id/ulchisixteen"
+            app:layout_constraintTop_toBottomOf="@id/commentthirtysix"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:background="@color/darkTeal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ulchisixteen"
+            android:layout_width="0dp"
+            android:layout_height="1dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
