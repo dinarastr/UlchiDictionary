@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ExampleStyle" parent="RobotoMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/bluish_grey</item>
+    </style>
+
+    <style name="CommentStyle">
+        <item name="android:textColor">@color/bluish_grey</item>
+        <item name="android:textAppearance">@style/RobotoMedium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="UlchiStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/darkTeal</item>
+        <item name="android:textAppearance">@style/RobotoMedium</item>
+    </style>
+</resources>

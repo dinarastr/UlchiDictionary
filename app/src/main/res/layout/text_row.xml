@@ -38,17 +38,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
-            android:textSize="16sp"
             android:visibility="gone"
-            android:textStyle="italic"
-            style="@style/RobotoMedium"
-            android:textColor="@color/bluish_grey"
+            style="@style/ExampleStyle"
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:textSize="16sp"
             android:id="@+id/exampleonerus"
-            style="@style/RobotoMedium"
+            style="@style/ExampleRusStyle"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@id/exampleone"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,26 +53,22 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/commentone"
-            android:textColor="@color/bluish_grey"
-            android:textAppearance="@style/RobotoMedium"
             app:layout_constraintTop_toBottomOf="@id/exampleonerus"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
             android:visibility="gone"
-            android:textSize="14sp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            style="@style/CommentStyle" />
         <TextView
             android:id="@+id/ulchitwo"
-            android:textSize="16sp"
             android:visibility="gone"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
             app:layout_constraintTop_toBottomOf="@id/commentone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            style="@style/UlchiStyle" />
 
         <TextView
             android:id="@+id/commenttwo"
@@ -84,20 +76,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
-            android:textSize="14sp"
             android:visibility="gone"
-
-            android:textColor="@color/bluish_grey"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/ulchithree"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             app:layout_constraintTop_toBottomOf="@id/commenttwo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -106,10 +92,8 @@
 
         <TextView
             android:id="@+id/commentthree"
-            android:textSize="14sp"
             android:visibility="gone"
-            android:textColor="@color/bluish_grey"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/ulchithree"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,11 +102,8 @@
 
         <TextView
             android:visibility="gone"
-
             android:id="@+id/exampletwo"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/ExampleStyle"
             app:layout_constraintTop_toBottomOf="@id/commentthree"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -132,9 +113,7 @@
             android:visibility="gone"
 
             android:id="@+id/exampletworus"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/ExampleRusStyle"
             app:layout_constraintTop_toBottomOf="@id/exampletwo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -142,10 +121,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/examplethree"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
+            style="@style/ExampleStyle"
             android:textAppearance="@style/RobotoMedium"
             app:layout_constraintTop_toBottomOf="@id/exampletworus"
             app:layout_constraintStart_toStartOf="parent"
@@ -154,11 +131,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/examplethreerus"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/ExampleRusStyle"
             app:layout_constraintTop_toBottomOf="@id/examplethree"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -166,11 +140,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/examplefour"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/ExampleStyle"
             app:layout_constraintTop_toBottomOf="@id/examplethreerus"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -178,11 +149,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/examplefourrus"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/ExampleRusStyle"
             app:layout_constraintTop_toBottomOf="@id/examplefour"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -190,11 +158,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/commenttwelve"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/examplefourrus"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -202,11 +167,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/ulchifour"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             app:layout_constraintTop_toBottomOf="@id/commenttwelve"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -214,11 +176,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/commentsixteen"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/ulchifour"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -226,11 +185,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/examplefiverus"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/ExampleRusStyle"
             app:layout_constraintTop_toBottomOf="@id/commentsixteen"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -238,11 +194,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/commenteighteen"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
             android:visibility="gone"
-
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/examplefiverus"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -250,11 +203,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/ulchifive"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             app:layout_constraintTop_toBottomOf="@id/commenteighteen"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -262,11 +212,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/commentnineteen"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/ulchifive"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -274,11 +221,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/ulchisix"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             app:layout_constraintTop_toBottomOf="@id/commentnineteen"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -286,11 +230,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/commenttwenty"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/ulchisix"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -298,11 +239,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/ulchiseven"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             app:layout_constraintTop_toBottomOf="@id/commenttwenty"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -310,11 +248,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/commenttwentyone"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/ulchiseven"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -322,11 +257,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/ulchieight"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             app:layout_constraintTop_toBottomOf="@id/commenttwentyone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -334,11 +266,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/commenttwentytwo"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/ulchieight"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -346,11 +275,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/ulchinine"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             app:layout_constraintTop_toBottomOf="@id/commenttwentytwo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -358,11 +284,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/commenttwentythree"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/ulchinine"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -370,11 +293,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/ulchiten"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             app:layout_constraintTop_toBottomOf="@id/commenttwentythree"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -382,11 +302,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/commenttwentyfour"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/ulchiten"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -394,11 +311,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/ulchieleven"
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             app:layout_constraintTop_toBottomOf="@id/commenttwentyfour"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -406,11 +320,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/commenttwentyfive"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/ulchieleven"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -418,11 +329,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/ulchitwelve"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             app:layout_constraintTop_toBottomOf="@id/commenttwentyfive"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -430,11 +338,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/examplesix"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/ExampleStyle"
             app:layout_constraintTop_toBottomOf="@id/ulchitwelve"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -442,11 +347,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/examplesixrus"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/ExampleRusStyle"
             app:layout_constraintTop_toBottomOf="@id/examplesix"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -454,11 +356,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/exampleseven"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/ExampleStyle"
             app:layout_constraintTop_toBottomOf="@id/examplesixrus"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -466,11 +365,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/examplesevenrus"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/ExampleRusStyle"
             app:layout_constraintTop_toBottomOf="@id/exampleseven"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -478,11 +374,8 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
             android:id="@+id/commenttwentysix"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/CommentStyle"
             app:layout_constraintTop_toBottomOf="@id/examplesevenrus"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -490,10 +383,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             android:id="@+id/ulchithirteen"
             app:layout_constraintTop_toBottomOf="@id/commenttwentysix"
             app:layout_constraintStart_toStartOf="parent"
@@ -502,10 +392,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+                style="@style/CommentStyle"
             android:id="@+id/commenttwentyseven"
             app:layout_constraintTop_toBottomOf="@id/ulchithirteen"
             app:layout_constraintStart_toStartOf="parent"
@@ -514,10 +401,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+                style="@style/UlchiStyle"
             android:id="@+id/ulchifourteen"
             app:layout_constraintTop_toBottomOf="@id/commenttwentyseven"
             app:layout_constraintStart_toStartOf="parent"
@@ -526,10 +410,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+style="@style/CommentStyle"
             android:id="@+id/commentthirtyfour"
             app:layout_constraintTop_toBottomOf="@id/ulchifourteen"
             app:layout_constraintStart_toStartOf="parent"
@@ -537,11 +418,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
         <TextView
-            android:textSize="16sp"
             android:visibility="gone"
-
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+style="@style/UlchiStyle"
             android:id="@+id/ulchififteen"
             app:layout_constraintTop_toBottomOf="@id/commentthirtyfour"
             app:layout_constraintStart_toStartOf="parent"
@@ -550,10 +428,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+style="@style/CommentStyle"
             android:id="@+id/commentthirtysix"
             app:layout_constraintTop_toBottomOf="@id/ulchififteen"
             app:layout_constraintStart_toStartOf="parent"
@@ -562,9 +437,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:visibility="gone"
-            android:textSize="16sp"
-            android:textColor="@color/darkTeal"
-            android:textAppearance="@style/RobotoMedium"
+            style="@style/UlchiStyle"
             android:id="@+id/ulchisixteen"
             app:layout_constraintTop_toBottomOf="@id/commentthirtysix"
             app:layout_constraintStart_toStartOf="parent"

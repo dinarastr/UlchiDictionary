@@ -17,7 +17,8 @@ import kotlinx.android.synthetic.main.text_row.view.*
 import org.w3c.dom.Text
 
 
-class RussianAdapter(private val onLastItemBound: (Int) -> Unit): RecyclerView.Adapter<RussianAdapter.MyViewHolder>() {
+class RussianAdapter(private val onLastItemBound: (Int) -> Unit):
+    RecyclerView.Adapter<RussianAdapter.MyViewHolder>() {
     var russianList = emptyList<RussianWord>()
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
@@ -91,6 +92,50 @@ class RussianAdapter(private val onLastItemBound: (Int) -> Unit): RecyclerView.A
             view.commentthree.visibility = GONE
         }*/
 
+        val comment = StringBuilder()
+        if (item.commentthree != null) {
+            comment.append(item.commentthree)
+        }
+        if (item.commentfour != null) {
+            comment.append("\n")
+            comment.append(item.commentfour)
+        }
+        if (item.commentfive != null) {
+            comment.append("\n")
+            comment.append(item.commentfive)
+        }
+        if (item.commentsix != null) {
+            comment.append("\n")
+            comment.append(item.commentsix)
+        }
+        if (item.commentseven != null) {
+            comment.append("\n")
+            comment.append(item.commentseven)
+        }
+        if (item.commenteight != null) {
+            comment.append("\n")
+            comment.append(item.commenteight)
+        }
+        if (item.commentnine != null) {
+            comment.append("\n")
+            comment.append(item.commentnine)
+        }
+        if (item.commentten != null) {
+            comment.append("\n")
+            comment.append(item.commentten)
+        }
+        if (item.commenteleven != null) {
+            comment.append("\n")
+            comment.append(item.commenteleven)
+        }
+
+        if (comment.isNotEmpty()) {
+            view.commentthree.show()
+            view.commentthree.text = comment
+        } else {
+            view.commentthree.hide()
+        }
+
         if (item.exampletwo != null) {
             view.exampletwo.visibility = VISIBLE
             view.exampletwo.text = item.exampletwo
@@ -133,12 +178,34 @@ class RussianAdapter(private val onLastItemBound: (Int) -> Unit): RecyclerView.A
             view.examplefourrus.visibility = GONE
         }
 
-       /* if (item.commenttwelve != null) {
-            view.commenttwelve.visibility = VISIBLE
-            view.commenttwelve.text = item.commenttwelve
+        val commentTwo = StringBuilder()
+
+       if (item.commenttwelve != null) {
+           commentTwo.append(item.commenttwelve)
+        }
+        if (item.grammar != null) {
+            commentTwo.append("\n")
+            commentTwo.append(item.grammar)
+        }
+        if (item.commentthirteen != null) {
+            commentTwo.append("\n")
+            commentTwo.append(item.commentthirteen)
+        }
+        if (item.commentfourteen != null) {
+            commentTwo.append("\n")
+            commentTwo.append(item.commentfourteen)
+        }
+        if (item.commentfifteen != null) {
+            commentTwo.append("\n")
+            commentTwo.append(item.commentfifteen)
+        }
+        if (commentTwo.isNotEmpty()) {
+            view.commenttwelve.show()
+            view.commenttwelve.text = commentTwo
         } else {
-            view.commenttwelve.visibility = GONE
-        }*/
+            view.commenttwelve.hide()
+        }
+
 
         if (item.ulchifour != null) {
             view.ulchifour.visibility = VISIBLE
@@ -147,11 +214,19 @@ class RussianAdapter(private val onLastItemBound: (Int) -> Unit): RecyclerView.A
             view.ulchifour.visibility = GONE
         }
 
+        val commentThree = StringBuilder()
         if (item.commentsixteen != null) {
-            view.commentsixteen.visibility = VISIBLE
-            view.commentsixteen.text = item.commentsixteen
+            commentThree.append(item.commentsixteen)
+        }
+        if (item.commentseventeen != null) {
+            commentThree.append("\n")
+            commentThree.append(item.commentseventeen)
+        }
+        if (commentThree.isNotEmpty()) {
+            view.commentsixteen.show()
+            view.commentsixteen.text = commentThree
         } else {
-            view.commentsixteen.visibility = GONE
+            view.commentsixteen.hide()
         }
         if (item.examplefiverus != null) {
             view.examplefiverus.visibility = VISIBLE
@@ -292,23 +367,62 @@ class RussianAdapter(private val onLastItemBound: (Int) -> Unit): RecyclerView.A
         } else {
             view.ulchithirteen.visibility = GONE
         }
+
+        val commentFour = StringBuilder()
         if (item.commenttwentyseven != null) {
-            view.commenttwentyseven.visibility = VISIBLE
-            view.commenttwentyseven.text = item.commenttwentyseven
-        } else {
-            view.commenttwentyseven.visibility = GONE
+            commentFour.append(item.commenttwentyseven)
         }
+        if (item.commenttwentyeight != null) {
+            commentFour.append("\n")
+            commentFour.append(item.commenttwentyeight)
+        }
+        if (item.commenttwentynine != null) {
+            commentFour.append("\n")
+            commentFour.append(item.commenttwentynine)
+        }
+        if (item.commentthirty != null) {
+            commentFour.append("\n")
+            commentFour.append(item.commentthirty)
+        }
+        if (item.commentthirtyone != null) {
+            commentFour.append("\n")
+            commentFour.append(item.commentthirtyone)
+        }
+        if (item.commentthirtytwo != null) {
+            commentFour.append("\n")
+            commentFour.append(item.commentthirtytwo)
+        }
+        if (item.commentthirtythree != null) {
+            commentFour.append("\n")
+            commentFour.append(item.commentthirtythree)
+        }
+        if (commentFour.isNotEmpty()) {
+            view.commenttwentyseven.show()
+            view.commenttwentyseven.text = commentFour
+        } else {
+            view.commenttwentyseven.hide()
+        }
+
         if (item.ulchifourteen != null) {
             view.ulchifourteen.visibility = VISIBLE
             view.ulchifourteen.text = item.ulchifourteen
         } else {
             view.ulchifourteen.visibility = GONE
         }
+
+        val commentFive = StringBuilder()
         if (item.commentthirtyfour != null) {
-            view.commentthirtyfour.visibility = VISIBLE
-            view.commentthirtyfour.text = item.commentthirtyfour
+            commentFive.append(item.commentthirtyfour)
+        }
+        if (item.commentthirtyfive != null) {
+            commentFive.append("\n")
+            commentFive.append(item.commentthirtyfive)
+        }
+        if (commentFive.isNotEmpty()) {
+            view.commentthirtyfour.show()
+            view.commentthirtyfour.text = commentFive
         } else {
-            view.commentthirtyfour.visibility = GONE
+            view.commentthirtyfour.hide()
         }
         if (item.ulchififteen != null) {
             view.ulchififteen.visibility = VISIBLE
@@ -316,11 +430,19 @@ class RussianAdapter(private val onLastItemBound: (Int) -> Unit): RecyclerView.A
         } else {
             view.ulchififteen.visibility = GONE
         }
+        val commentSix = StringBuilder()
         if (item.commentthirtysix != null) {
-            view.commentthirtysix.visibility = VISIBLE
-            view.commentthirtysix.text = item.commentthirtysix
+            commentSix.append(item.commentthirtysix)
+        }
+        if (item.commentthirtyseven != null) {
+            commentSix.append("\n")
+            commentSix.append(item.commentthirtyseven)
+        }
+        if (commentSix.isNotEmpty()) {
+            view.commentthirtysix.show()
+            view.commentthirtysix.text = commentSix
         } else {
-            view.commentthirtysix.visibility = GONE
+            view.commentthirtysix.hide()
         }
         if (item.ulchisixteen != null) {
             view.ulchisixteen.visibility = VISIBLE
@@ -328,10 +450,6 @@ class RussianAdapter(private val onLastItemBound: (Int) -> Unit): RecyclerView.A
         } else {
             view.ulchisixteen.visibility = GONE
         }
-
-
-
-
         if (position == russianList.size-1) onLastItemBound(russianList.size)
     }
 

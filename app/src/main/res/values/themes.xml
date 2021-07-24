@@ -25,4 +25,7 @@
     <style name="RobotoRegular" parent="Widget.MaterialComponents.TextView">
         <item name="android:fontFamily">sans-serif</item>
     </style>
+    <style name="ExampleRusStyle" parent="RobotoMedium">
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>
