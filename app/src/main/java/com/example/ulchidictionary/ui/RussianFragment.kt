@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.navigation.findNavController
@@ -16,6 +14,7 @@ import com.example.ulchidictionary.R
 import com.example.ulchidictionary.adapters.RussianAdapter
 import com.example.ulchidictionary.data.RussianWord
 import com.example.ulchidictionary.viewmodel.SharedViewModel
+import kotlinx.android.synthetic.main.fragment_russian.*
 import kotlinx.android.synthetic.main.fragment_russian.view.*
 
 class RussianFragment : Fragment() {
@@ -46,9 +45,8 @@ class RussianFragment : Fragment() {
         view.searchView.addTextChangedListener(textWatcher)
 
         Log.i("Dinara", view.searchView.text.toString())
-        /*vm.allRussianWords.observe(viewLifecycleOwner, Observer { data ->
-            adapter.setData(data)
-        })*/
+        setHasOptionsMenu(true)
+
         return view
     }
 
@@ -80,6 +78,24 @@ class RussianFragment : Fragment() {
             adapter.setData(russianwords)
         }
 
+    }
+
+    private fun openInfo(): Boolean {
+        arrow.findNavController().navigate(RussianFragmentDirections.actionRussianFragmentToAboutFragment())
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_click ->
+                openInfo()
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu, menu)
     }
 
     companion object {

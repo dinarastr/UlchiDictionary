@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_russianFragment_to_ulchiFragment"
             app:destination="@id/ulchiFragment" />
+        <action
+            android:id="@+id/action_russianFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
     <fragment
         android:id="@+id/ulchiFragment"
@@ -22,5 +25,13 @@
         <action
             android:id="@+id/action_ulchiFragment_to_russianFragment"
             app:destination="@id/russianFragment" />
+        <action
+            android:id="@+id/action_ulchiFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.ulchidictionary.ui.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>

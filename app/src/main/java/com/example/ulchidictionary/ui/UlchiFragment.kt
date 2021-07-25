@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.navigation.findNavController
@@ -19,6 +17,7 @@ import com.example.ulchidictionary.data.RussianWord
 import com.example.ulchidictionary.data.UlchiWord
 import com.example.ulchidictionary.viewmodel.SharedViewModel
 import kotlinx.android.synthetic.main.fragment_russian.view.*
+import kotlinx.android.synthetic.main.fragment_ulchi.*
 import kotlinx.android.synthetic.main.fragment_ulchi.view.*
 import kotlinx.android.synthetic.main.fragment_ulchi.view.arrow
 import kotlinx.android.synthetic.main.fragment_ulchi.view.searchView
@@ -34,6 +33,11 @@ class UlchiFragment : Fragment() {
     }
     private var canLoadMore = true
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu, menu)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,6 +47,7 @@ class UlchiFragment : Fragment() {
             val action = UlchiFragmentDirections.actionUlchiFragmentToRussianFragment()
             view.arrow.findNavController().navigate(action)
         }
+        setHasOptionsMenu(true)
 
         val recycler = view.ulchiwords_rv
         recycler.adapter = adapter
@@ -83,6 +88,19 @@ class UlchiFragment : Fragment() {
             adapter.setData(ulchiWords)
         }
 
+    }
+
+    private fun openInfo(): Boolean {
+        arrow.findNavController().navigate(UlchiFragmentDirections.actionUlchiFragmentToAboutFragment())
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_click ->
+                openInfo()
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     companion object {
