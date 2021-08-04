@@ -1,20 +1,14 @@
-package com.example.ulchidictionary.adapters
+package ru.dinarastepina.ulchidictionary.adapters
 
-import android.content.Context
-import android.content.res.Resources
-import android.opengl.Visibility
-import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.*
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.asynclayoutinflater.view.AsyncLayoutInflater
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ulchidictionary.R
-import com.example.ulchidictionary.data.RussianWord
+import ru.dinarastepina.ulchidictionary.data.RussianWord
 import kotlinx.android.synthetic.main.text_row.view.*
-import org.w3c.dom.Text
+import ru.dinarastepina.ulchidictionary.R
 
 
 class RussianAdapter(private val onLastItemBound: (Int) -> Unit):
@@ -78,19 +72,6 @@ class RussianAdapter(private val onLastItemBound: (Int) -> Unit):
         } else {
             view.ulchithree.visibility = GONE
         }
-
-       /* if (item.commentthree != null || item.commentfour != null
-            || item.commentfive != null || item.commentsix != null || item.commentseven != null
-            || item.commenteight != null || item.commentnine != null || item.commentten != null
-            || item.commenteleven != null) {
-            view.commentthree.visibility = VISIBLE
-            view.commentthree.text = view.context.getString(R.string.comment_one,
-            item.commentthree, item.commentfour, item.commentfive, item.commentsix,
-            item.commentseven, item.commenteight, item.commentnine, item.commentten,
-            item.commenteleven)
-        } else {
-            view.commentthree.visibility = GONE
-        }*/
 
         val comment = StringBuilder()
         if (item.commentthree != null) {

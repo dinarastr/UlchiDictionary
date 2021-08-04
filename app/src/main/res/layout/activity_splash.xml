@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/background"
     android:layout_height="match_parent"
-    tools:context=".ui.SplashActivity">
+    tools:context="ru.dinarastepina.ulchidictionary.ui.SplashActivity">
 
     <ImageView
         android:src="@drawable/splash"

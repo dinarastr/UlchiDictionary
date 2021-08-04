@@ -1,9 +1,9 @@
-package com.example.ulchidictionary.repository
+package ru.dinarastepina.ulchidictionary.repository
 
 import androidx.lifecycle.LiveData
-import com.example.ulchidictionary.data.DictionaryDao
-import com.example.ulchidictionary.data.RussianWord
-import com.example.ulchidictionary.data.UlchiWord
+import ru.dinarastepina.ulchidictionary.data.DictionaryDao
+import ru.dinarastepina.ulchidictionary.data.RussianWord
+import ru.dinarastepina.ulchidictionary.data.UlchiWord
 
 class DictionaryRepository(private val dao: DictionaryDao) {
 

@@ -1,12 +1,12 @@
-package com.example.ulchidictionary.viewmodel
+package ru.dinarastepina.ulchidictionary.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.ulchidictionary.data.RussianWord
-import com.example.ulchidictionary.data.UlchiDatabase
-import com.example.ulchidictionary.data.UlchiWord
-import com.example.ulchidictionary.repository.DictionaryRepository
+import ru.dinarastepina.ulchidictionary.data.RussianWord
+import ru.dinarastepina.ulchidictionary.data.UlchiDatabase
+import ru.dinarastepina.ulchidictionary.data.UlchiWord
+import ru.dinarastepina.ulchidictionary.repository.DictionaryRepository
 
 class SharedViewModel(application: Application): AndroidViewModel(application){
     private val dao = UlchiDatabase.getDatabase(application).DictionaryDao()

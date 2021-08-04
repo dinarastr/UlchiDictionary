@@ -1,8 +1,8 @@
-package com.example.ulchidictionary.ui
+package ru.dinarastepina.ulchidictionary.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ulchidictionary.R
+import ru.dinarastepina.ulchidictionary.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

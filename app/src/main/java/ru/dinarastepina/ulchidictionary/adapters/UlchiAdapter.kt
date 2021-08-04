@@ -1,12 +1,12 @@
-package com.example.ulchidictionary.adapters
+package ru.dinarastepina.ulchidictionary.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ulchidictionary.R
-import com.example.ulchidictionary.data.UlchiWord
+import ru.dinarastepina.ulchidictionary.R
+import ru.dinarastepina.ulchidictionary.data.UlchiWord
 import kotlinx.android.synthetic.main.ulchi_row.view.*
 
 class UlchiAdapter(private val onLastItemBound: (Int) -> Unit):

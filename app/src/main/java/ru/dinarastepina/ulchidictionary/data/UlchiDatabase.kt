@@ -1,11 +1,9 @@
-package com.example.ulchidictionary.data
+package ru.dinarastepina.ulchidictionary.data
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 
 //@AutoMigration(from = 1, to = 2)
 @Database(version = 1, entities = [RussianWord::class, UlchiWord::class], exportSchema = false)

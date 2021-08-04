@@ -1,4 +1,4 @@
-package com.example.ulchidictionary.ui
+package ru.dinarastepina.ulchidictionary.ui
 
 import android.os.Bundle
 import android.text.Editable
@@ -10,34 +10,45 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.ulchidictionary.R
-import com.example.ulchidictionary.adapters.RussianAdapter
-import com.example.ulchidictionary.data.RussianWord
-import com.example.ulchidictionary.viewmodel.SharedViewModel
-import kotlinx.android.synthetic.main.fragment_russian.*
+import ru.dinarastepina.ulchidictionary.R
+import ru.dinarastepina.ulchidictionary.adapters.UlchiAdapter
+import ru.dinarastepina.ulchidictionary.data.UlchiWord
+import ru.dinarastepina.ulchidictionary.viewmodel.SharedViewModel
 import kotlinx.android.synthetic.main.fragment_russian.view.*
+import kotlinx.android.synthetic.main.fragment_ulchi.*
+import kotlinx.android.synthetic.main.fragment_ulchi.view.*
+import kotlinx.android.synthetic.main.fragment_ulchi.view.arrow
+import kotlinx.android.synthetic.main.fragment_ulchi.view.searchView
 
-class RussianFragment : Fragment() {
+class UlchiFragment : Fragment() {
 
     private val vm: SharedViewModel by viewModels()
-    private var russianwords: List<RussianWord> = emptyList()
-    private val adapter: RussianAdapter by lazy { RussianAdapter(
+    private var ulchiWords: List<UlchiWord> = emptyList()
+    private val adapter: UlchiAdapter by lazy { UlchiAdapter(
         onLastItemBound = { offset ->
-        loadNextPage(query = view?.searchView?.text?.toString() ?: "", offset = offset)
-    })
+            loadNextPage(query = view?.searchView?.text?.toString() ?: "", offset = offset)
+        })
     }
     private var canLoadMore = true
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu, menu)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_russian, container, false)
+        val view = inflater.inflate(R.layout.fragment_ulchi, container, false)
         view.arrow.setOnClickListener {
-            val action = RussianFragmentDirections.actionRussianFragmentToUlchiFragment()
+            val action =
+                UlchiFragmentDirections.actionUlchiFragmentToRussianFragment()
             view.arrow.findNavController().navigate(action)
         }
-        val recycler = view.russianwords_rv
+        setHasOptionsMenu(true)
+
+        val recycler = view.ulchiwords_rv
         recycler.adapter = adapter
         recycler.setItemViewCacheSize(10)
         recycler.layoutManager = LinearLayoutManager(requireActivity())
@@ -45,8 +56,6 @@ class RussianFragment : Fragment() {
         view.searchView.addTextChangedListener(textWatcher)
 
         Log.i("Dinara", view.searchView.text.toString())
-        setHasOptionsMenu(true)
-
         return view
     }
 
@@ -66,22 +75,22 @@ class RussianFragment : Fragment() {
         val liveData = when (query.isEmpty()) {
 
             true ->
-                vm.allRussianWords(pageSize = PAGE_SIZE, offset = offset)
+                vm.allUlchiWords(pageSize = PAGE_SIZE, offset = offset)
             false ->
-                vm.searchRussian(word = query, pageSize = PAGE_SIZE, offset = offset)
+                vm.searchUlchi(word = query, pageSize = PAGE_SIZE, offset = offset)
         }
 
         liveData.observe(viewLifecycleOwner) { words ->
             canLoadMore = words.size == PAGE_SIZE
-            val newList = if (offset == 0) words else russianwords + words
-            russianwords = newList
-            adapter.setData(russianwords)
+            val newList = if (offset == 0) words else ulchiWords + words
+            ulchiWords = newList
+            adapter.setData(ulchiWords)
         }
 
     }
 
     private fun openInfo(): Boolean {
-        arrow.findNavController().navigate(RussianFragmentDirections.actionRussianFragmentToAboutFragment())
+        arrow.findNavController().navigate(UlchiFragmentDirections.actionUlchiFragmentToAboutFragment())
         return true
     }
 
@@ -91,11 +100,6 @@ class RussianFragment : Fragment() {
                 openInfo()
             else -> super.onOptionsItemSelected(item)
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.menu, menu)
     }
 
     companion object {

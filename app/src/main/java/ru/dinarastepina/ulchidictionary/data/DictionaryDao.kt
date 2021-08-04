@@ -1,4 +1,4 @@
-package com.example.ulchidictionary.data
+package ru.dinarastepina.ulchidictionary.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
